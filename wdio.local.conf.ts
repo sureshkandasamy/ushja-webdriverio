@@ -6,7 +6,7 @@ export const config: WebdriverIO.Config = {
         capabilities: [{
             browserName: 'chrome',
             'wdio:devtoolsOptions': {
-                headless: false
+                headless: true
             }
         }]
     }

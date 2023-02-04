@@ -1,6 +1,7 @@
 name: Sauce CI
 
-on: [push, pull_request_target]
+#on: [push, pull_request_target]
+on: workflow_dispatch
 
 env:
   SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
