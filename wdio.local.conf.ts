@@ -5,9 +5,24 @@ export const config: WebdriverIO.Config = {
     ...{
         capabilities: [{
             browserName: 'chrome',
-            'wdio:devtoolsOptions': {
-                headless: true
-            }
-        }]
+            // 'wdio:devtoolsOptions': {
+            //     headless: true
+            // },
+            // "goog:chromeOptions": {
+            // 	args: ['-headless']
+          	// },
+
+
+        },
+            {
+                browserName: "firefox",
+                //acceptInsecureCerts: true,
+                // "moz:firefoxOptions": {
+                //     args: ['-headless']
+                //   },
+    
+        }        
+        
+]
     }
 }

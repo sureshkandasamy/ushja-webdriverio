@@ -1,5 +1,7 @@
 import url from 'node:url'
 import path from 'node:path'
+import allure from 'allure-commandline'
+
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
@@ -28,6 +30,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     exclude: [
         // 'path/to/excluded/files'
     ],
+
+    services: ['selenium-standalone' ],
+
     //
     // ============
     // Capabilities
@@ -44,7 +49,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 2,
     //
     // ===================
     // Test Configurations
@@ -81,7 +86,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     baseUrl: 'https://test.ushja.org/',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 30000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -107,12 +112,18 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
+    reporters: ['spec',
+         ['allure', {
+            outputDir: 'allure-results',
+            // disableWebdriverStepsReporting: true,
+            // disableWebdriverScreenshotsReporting: true,
+    }]
+],
     //
     // Options to be passed to Jasmine.
     jasmineOpts: {
         // Jasmine default timeout
-        defaultTimeoutInterval: 60000,
+        defaultTimeoutInterval: 120000,
         //
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
@@ -120,7 +131,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
         // expectationResultHandler: function(passed, assertion) {
         //     do something
         // }
-    }
+    },
     //
     // =====
     // Hooks
@@ -197,8 +208,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+        await browser.takeScreenshot();
+    },
 
 
     /**
@@ -233,6 +245,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
      */
     // afterSession: function (config, capabilities, specs) {
     // },
+
     /**
      * Gets executed after all workers got shut down and the process is about to exit. An error
      * thrown in the onComplete hook will result in the test run failing.
@@ -243,6 +256,27 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
      */
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
+    onComplete: function() {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
+    
+            generation.on('exit', function(exitCode) {
+                clearTimeout(generationTimeout)
+    
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+    
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    },
+    
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
