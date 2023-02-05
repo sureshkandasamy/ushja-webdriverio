@@ -24,7 +24,7 @@
   "scripts": {
     "test": "wdio run wdio.sauce.conf.ts",
     "test:local": "wdio run wdio.local.conf.ts",
-    "test:sauce": "wdio run wdio.sauce.conf.ts"
+    "test:local.uat": "wdio run wdio.local.uat.conf.ts"
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^8.3.0",
