@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Sun Feb 05 08:14:10 GMT 2023","Sun Feb 05 08:14:10 GMT 2023","0","","login","","login","#Negative should deny access with wrong credentials ","#Negative should deny access with wrong credentials ",""
+"passed","Sun Feb 05 08:14:10 GMT 2023","Sun Feb 05 08:14:17 GMT 2023","6956","","login","","login","#Regression #UAT should allow access to welcome page with correct credentials ","#Regression #UAT should allow access to welcome page with correct credentials ",""
