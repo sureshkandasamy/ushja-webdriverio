@@ -22,9 +22,11 @@
     "url": "https://github.com/webdriverio/jasmine-boilerplate/issues"
   },
   "scripts": {
-    "test": "wdio run wdio.sauce.conf.ts",
-    "test:local": "wdio run wdio.local.conf.ts",
-    "test:local.uat": "wdio run wdio.local.uat.conf.ts"
+    "test": "wdio run wdio.local.tst.conf.ts",
+    "test:local.tst": "wdio run wdio.local.tst.conf.ts",
+    "test:local.uat": "wdio run wdio.local.uat.conf.ts",
+    "allure:open": "npx allure open ./allure-report",
+    "allure:serve": "npx allure serve"
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^8.3.0",
