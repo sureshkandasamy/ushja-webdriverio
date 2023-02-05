@@ -34,7 +34,7 @@ jobs:
             ref: gh-pages
             path: gh-pages
         
-        - name: Test Ushja application
+        - name: Test marketplace action
           uses: simple-elf/allure-report-action@master
           if: always()
           id: allure-report
