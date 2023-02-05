@@ -2,7 +2,7 @@ import LoginPage from '../../pageobjects/login.page.js'
 
 describe('login', ()=> {
 
-  it('#Negative should deny access with wrong credentials ', async () => {
+  it('#Regression should deny access with wrong credentials ', async () => {
     await LoginPage.open()
     await LoginPage.username.setValue('test')
     await LoginPage.password.setValue('test123invaLid')

@@ -14,15 +14,19 @@ export const config: WebdriverIO.Config = {
 
 
         },
-            {
-                browserName: "firefox",
-                //acceptInsecureCerts: true,
-                // "moz:firefoxOptions": {
-                //     args: ['-headless']
-                //   },
+        //     {
+        //         browserName: "firefox",
+        //         //acceptInsecureCerts: true,
+        //         // "moz:firefoxOptions": {
+        //         //     args: ['-headless']
+        //         //   },
     
-        }        
+        // }        
         
-]
+],
+specs: [
+    './test/specs/ushja/**/members.joinUshja.spec.ts',
+    './test/specs/ushja/**/members.login.spec.ts'
+],
     }
 }

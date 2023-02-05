@@ -26,6 +26,16 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     specs: [
         './test/specs/ushja/**/*.ts'
     ],
+    suites: {
+        login: [
+            './test/specs/ushja/members.login.spec.js'
+        ],
+        Members: [
+            './test/specs/ushja/members.joinUshja.spec.js'
+        ],
+
+    },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -124,7 +134,6 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     jasmineOpts: {
         // Jasmine default timeout
         defaultTimeoutInterval: 120000,
-        grep: '#Regression',
         //
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
