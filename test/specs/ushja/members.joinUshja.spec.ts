@@ -6,7 +6,6 @@ import allureReporter from '@wdio/allure-reporter'
 describe('joinUshja', ()=> {
 
     beforeAll(async function() { 
-        console.log("before all joinUshja tests");
         await LoginPage.open()
         await LoginPage.username.setValue('SummerStoffel21')
         await LoginPage.password.setValue('Bellsoph@01')

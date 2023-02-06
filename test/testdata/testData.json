@@ -1,14 +1,14 @@
 {
-    "testInactiveMember1": {
-    "username": "SummerStoffel21",
-    "password": "Bellsoph",
-    "testData": {
-        "profileInfoName":"SUMMER STOFFEL",
-        "profileInfoId":"HJ263638",
-        "profileInfoStatus": "Inactive",
-        "profileInfoCategory": "Owner, Breeder",
-        "profileInfoPrimaryDiscipline": "Jumper",
-        "profileInfoOtherDiscipline": "Jumper, Hunter"
+    "tst": {
+    "username": "praneshTest25",
+    "password": "pranesh",
+    "profileInfo": {
+        "profileInfoName":"PRANESH K K",
+        "profileInfoId":"HJ6000213",
+        "profileInfoStatus": "Active/Competing",
+        "profileInfoCategory": "Coach",
+        "profileInfoPrimaryDiscipline": "Hunter",
+        "profileInfoOtherDiscipline": ""
         }
 
 }

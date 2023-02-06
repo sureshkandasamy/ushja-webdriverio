@@ -1,15 +1,14 @@
 import HorseDetailsTablePage from '../../pageobjects/horseDetailsTable.page.js'
 import LoginPage from '../../pageobjects/login.page.js'
 import allureReporter from '@wdio/allure-reporter'
-
+import testData from '../../../utils/testData.js'
 
 describe('My horse details table', ()=> {
 
     beforeAll(async function() { 
-        console.log("before all my horse details tests");
         await LoginPage.open()
-        await LoginPage.username.setValue('SummerStoffel21')
-        await LoginPage.password.setValue('Bellsoph@01')
+        await LoginPage.username.setValue(testData.tstdata.username)
+        await LoginPage.password.setValue(testData.tstdata.password)
         await LoginPage.submit()
 
         await LoginPage.welcomeText.waitForDisplayed() 
