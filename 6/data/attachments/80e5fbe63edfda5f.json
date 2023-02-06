@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//span[@class=\"MuiStepLabel-labelContainer\"]/span[text()=\"Membership Type\"]"
+}
