@@ -31,7 +31,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
             './test/specs/ushja/members.login.spec.js'
         ],
         Members: [
-            './test/specs/ushja/members.joinUshja.spec.js'
+            './test/specs/ushja/members.joinUshja.spec.js',
+            './test/specs/ushja/members.profileInfo.spec.js'
+
         ],
 
     },

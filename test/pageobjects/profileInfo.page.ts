@@ -1,6 +1,6 @@
 import Page from './page.js'
 
-class WelcomePage extends Page {
+class ProfileInfoPage extends Page {
       /**
      * define elements
      */    
@@ -12,11 +12,9 @@ class WelcomePage extends Page {
 
       get profileInfoPrimaryDiscipline () { return $('//div/p[text()="Primary Discipline"]/parent::div/div/p') }
 
-      get profileInfoOtherDiscipline () { return $('//div/p[text()="Other Discipline"]/parent::div/div/p') }
-
-   
+      get profileInfoOtherDiscipline () { return $('//div/p[text()="Other Disciplines"]/parent::div/div/p') }
 
 
 }
 
-export default new WelcomePage()
+export default new ProfileInfoPage()

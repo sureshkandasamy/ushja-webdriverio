@@ -1,0 +1,15 @@
+{
+    "testInactiveMember1": {
+    "username": "SummerStoffel21",
+    "password": "Bellsoph",
+    "testData": {
+        "profileInfoName":"SUMMER STOFFEL",
+        "profileInfoId":"HJ263638",
+        "profileInfoStatus": "Inactive",
+        "profileInfoCategory": "Owner, Breeder",
+        "profileInfoPrimaryDiscipline": "Jumper",
+        "profileInfoOtherDiscipline": "Jumper, Hunter"
+        }
+
+}
+}

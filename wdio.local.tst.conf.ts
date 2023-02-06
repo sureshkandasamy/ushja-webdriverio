@@ -8,25 +8,18 @@ export const config: WebdriverIO.Config = {
             // 'wdio:devtoolsOptions': {
             //     headless: true
             // },
-            // "goog:chromeOptions": {
-            // 	args: ['-headless']
-          	// },
-
-
         },
-        //     {
-        //         browserName: "firefox",
-        //         //acceptInsecureCerts: true,
-        //         // "moz:firefoxOptions": {
-        //         //     args: ['-headless']
-        //         //   },
+        {
+                browserName: "firefox",
+          },
     
-        // }        
         
 ],
-specs: [
-    './test/specs/ushja/**/members.joinUshja.spec.ts',
-    './test/specs/ushja/**/members.login.spec.ts'
-],
+// specs: [
+//     './test/specs/ushja/**/members.login.spec.ts',
+//     './test/specs/ushja/**/members.joinUshja.spec.ts',
+//    './test/specs/ushja/**/members.profileInfo.spec.ts',
+//     './test/specs/ushja/**/members.horseDetails.spec.ts'
+// ],
     }
 }
