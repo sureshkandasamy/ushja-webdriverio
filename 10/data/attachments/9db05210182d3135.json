@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//div/p[contains(text(),\"Are you applying for Membership at a competition?\")]"
+}
