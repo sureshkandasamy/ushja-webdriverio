@@ -1,10 +1,12 @@
 import ProfileInfoPage from '../../pageobjects/profileInfo.page.js'
 import LoginPage from '../../pageobjects/login.page.js'
 import * as testData from '../../testdata/testData.json';
+import allureReporter from '@wdio/allure-reporter'
+
 
 
 describe('profile Information', ()=> {
-    console.log(testData);
+    //console.log(testData);
 
 
     beforeAll(async function() { 
@@ -19,6 +21,8 @@ describe('profile Information', ()=> {
 
 
   it('#Regression #UAT Member profile info should be correct', async () => {
+    allureReporter.addFeature("Members");
+
     
     await ProfileInfoPage.profileInfoName.waitForDisplayed()
     await expect(ProfileInfoPage.profileInfoName).toHaveText("SUMMER STOFFEL")

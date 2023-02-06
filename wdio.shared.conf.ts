@@ -3,6 +3,7 @@ import path from 'node:path'
 import allure from 'allure-commandline'
 
 
+
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
@@ -128,7 +129,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
          ['allure', {
             outputDir: 'allure-results',
             // disableWebdriverStepsReporting: true,
-            // disableWebdriverScreenshotsReporting: true,
+            // disableWebdriverScreenshotsReporting: false,
+            // useCucumberStepReporter: false
+
     }]
 ],
     //

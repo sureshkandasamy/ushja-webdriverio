@@ -1,5 +1,6 @@
 import HorseDetailsTablePage from '../../pageobjects/horseDetailsTable.page.js'
 import LoginPage from '../../pageobjects/login.page.js'
+import allureReporter from '@wdio/allure-reporter'
 
 
 describe('My horse details table', ()=> {
@@ -16,6 +17,8 @@ describe('My horse details table', ()=> {
 
 
   it('#Regression #UAT user should be able to view the My Horse details sections and the details are correct', async () => {
+    allureReporter.addFeature("Members");
+
     await HorseDetailsTablePage.myHorsesTable.waitForDisplayed()
     await expect(HorseDetailsTablePage.myHorsesTable).toExist()
     const rows = await HorseDetailsTablePage.getTableRowCount()
