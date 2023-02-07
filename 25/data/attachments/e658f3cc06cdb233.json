@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//tbody/tr[3]/th/div\"}\n  (Session info: headless chrome=109.0.5414.119)",
+  "stacktrace": "#0 0x55d884383303 <unknown>\n#1 0x55d884157d37 <unknown>\n#2 0x55d8841945b2 <unknown>\n#3 0x55d8841946c1 <unknown>\n#4 0x55d884189336 <unknown>\n#5 0x55d8841b49ad <unknown>\n#6 0x55d88418922f <unknown>\n#7 0x55d8841b4b4e <unknown>\n#8 0x55d8841cc88c <unknown>\n#9 0x55d8841b4753 <unknown>\n#10 0x55d884187a14 <unknown>\n#11 0x55d884188b7e <unknown>\n#12 0x55d8843d232e <unknown>\n#13 0x55d8843d5c0e <unknown>\n#14 0x55d8843b8610 <unknown>\n#15 0x55d8843d6c23 <unknown>\n#16 0x55d8843aa545 <unknown>\n#17 0x55d8843f76a8 <unknown>\n#18 0x55d8843f7836 <unknown>\n#19 0x55d884412d13 <unknown>\n#20 0x7febe79dcb43 <unknown>\n"
+}
