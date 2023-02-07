@@ -1,6 +1,10 @@
 import url from 'node:url'
 import path from 'node:path'
 import allure from 'allure-commandline'
+import LoginPage from './test/pageobjects/login.page.js'
+import testData from './utils/testData.js'
+import allureReporter from '@wdio/allure-reporter'
+
 
 
 
@@ -31,12 +35,20 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
         login: [
             './test/specs/ushja/members.login.spec.js'
         ],
-        Members: [
+        membership: [
             './test/specs/ushja/members.joinUshja.spec.js',
             './test/specs/ushja/members.profileInfo.spec.js'
-
         ],
-
+        horses: [
+            './test/specs/ushja/members.horseDetails.spec.js'        ],
+        e2e: [],
+        smoke: [ 
+            './test/specs/ushja/members.login.spec.js',
+            './test/specs/ushja/members.profileInfo.spec.js'
+        ],
+        regression: [ 
+            './test/specs/ushja/**/*.ts'
+        ]
     },
 
     // Patterns to exclude.
@@ -206,8 +218,44 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function (test, context) {
-    // },
+    beforeTest: async function (test, context) {
+        let currentTestName = test.fullName;
+        var moduleName;
+
+        if (currentTestName.includes("#Login")==true) {
+            moduleName = "Login";
+        }else if (currentTestName.includes("#Membership")==true) {
+            moduleName = "Membership";
+        }else if (currentTestName.includes("#Horses")==true) {
+            moduleName = "Horses";
+        }
+
+        switch(moduleName){
+            case "Login":
+                allureReporter.addFeature("Login"); 
+                break; 
+            case "Membership":
+              allureReporter.addFeature("Membership");
+              break;
+            case "Horses":
+              allureReporter.addFeature("Horses");
+              break;
+        }
+       
+        if (moduleName!="Login") {
+            await LoginPage.open()
+            await LoginPage.username.setValue(testData.tstdata.username)
+            await LoginPage.password.setValue(testData.tstdata.password)
+            await LoginPage.submit()
+    
+            await LoginPage.welcomeText.waitForDisplayed() 
+
+        }
+
+        
+    
+
+    },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)

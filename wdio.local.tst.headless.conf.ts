@@ -19,14 +19,6 @@ export const config: WebdriverIO.Config = {
     
         }        
         
-],
-specs: [
-    './test/specs/ushja/**/members.login.spec.ts',
-    './test/specs/ushja/**/members.joinUshja.spec.ts',
-   './test/specs/ushja/**/members.profileInfo.spec.ts',
-    './test/specs/ushja/**/members.horseDetails.spec.ts'
-
-
-],
+]
     }
 }

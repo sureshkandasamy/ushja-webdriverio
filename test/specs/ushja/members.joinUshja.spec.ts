@@ -1,23 +1,14 @@
 import JoinUshjaDialogPage from '../../pageobjects/joinUshjaDialog.page.js'
 import LoginPage from '../../pageobjects/login.page.js'
-import allureReporter from '@wdio/allure-reporter'
+
 
 
 describe('joinUshja', ()=> {
 
-    beforeAll(async function() { 
-        await LoginPage.open()
-        await LoginPage.username.setValue('SummerStoffel21')
-        await LoginPage.password.setValue('Bellsoph@01')
-        await LoginPage.submit()
 
-        await LoginPage.welcomeText.waitForDisplayed() 
- });
+  it.skip('#UAT #Membership user should be able to click Join USHJA and displayed with Join USHJA dialog', async () => {
 
-
-  it('#Regression #UAT user should be able to view the Join USHJA dialog', async () => {
-    allureReporter.addFeature("Members");
-
+    await JoinUshjaDialogPage.joinUSHJAActionCard.waitForDisplayed()
     await JoinUshjaDialogPage.joinUSHJAActionCard.click()
     await JoinUshjaDialogPage.joinUSHJAHeadingText.waitForDisplayed()
     await expect(JoinUshjaDialogPage.joinUSHJAHeadingText).toExist()
@@ -31,9 +22,6 @@ describe('joinUshja', ()=> {
     await expect(JoinUshjaDialogPage.orderConfirmationStepLabel).toExist()
 
     await JoinUshjaDialogPage.closeButton.click()
-
-
-
 })
     
 

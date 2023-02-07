@@ -5,21 +5,12 @@ export const config: WebdriverIO.Config = {
     ...{
         capabilities: [{
             browserName: 'chrome',
-            // 'wdio:devtoolsOptions': {
-            //     headless: true
-            // },
         },
         {
                 browserName: "firefox",
           },
     
         
-],
-// specs: [
-//     './test/specs/ushja/**/members.login.spec.ts',
-//     './test/specs/ushja/**/members.joinUshja.spec.ts',
-//    './test/specs/ushja/**/members.profileInfo.spec.ts',
-//     './test/specs/ushja/**/members.horseDetails.spec.ts'
-// ],
+]
     }
 }

@@ -8,7 +8,7 @@ fs.readFile("./test/testdata/testData.json", "utf8", (err, jsonString) => {
   }
 
   jsondata =  JSON.parse(jsonString);
-  console.log("File data:", jsonString);
+ // console.log("File data:", jsonString);
 });
 
 class testData {
