@@ -4,7 +4,7 @@ import testData from '../../../utils/testData.js'
 describe('My horse details table', ()=> {
 
   
-  it('#UAT #Horses Failing testcase-user should be able to view the My Horse details for "Processing" status', async () => {
+  it('#Horses Failing testcase-user should be able to view the My Horse details for "Processing" status', async () => {
 
     await HorseDetailsTablePage.myHorsesTable.waitForDisplayed()
     await expect(HorseDetailsTablePage.myHorsesTable).toExist()
