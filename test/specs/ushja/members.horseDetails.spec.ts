@@ -4,13 +4,13 @@ import testData from '../../../utils/testData.js'
 describe('My horse details table', ()=> {
 
   
-  it('#Horses Failing testcase-user should be able to view the My Horse details for "Processing" status', async () => {
+  it('#Horses user should be able to view the My Horse details for "Processing" status', async () => {
 
     await HorseDetailsTablePage.myHorsesTable.waitForDisplayed()
     await expect(HorseDetailsTablePage.myHorsesTable).toExist()
     //const rows = await HorseDetailsTablePage.getTableRowCount()
 
-    expect(await HorseDetailsTablePage.getRowHorseName(1)).toEqual("FLEUVE-FAIL")
+    expect(await HorseDetailsTablePage.getRowHorseName(1)).toEqual("FLEUVE")
 
     expect(await HorseDetailsTablePage.getCellData(1, 1)).toEqual("-")
     expect(await HorseDetailsTablePage.getCellData(1, 2)).toEqual("HJ6000240")
