@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//div/h5[text()=\"Manage my details\"]/parent::div//table"
+}
