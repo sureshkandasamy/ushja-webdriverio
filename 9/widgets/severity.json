@@ -1,1 +1,1 @@
-[{"uid":"39e4c5e52ed56243","name":"#Negative should deny access with wrong credentials ","time":{"start":1675584850925,"stop":1675584850925,"duration":0},"status":"skipped","severity":"normal"},{"uid":"ccd3b303523f346f","name":"#Regression #UAT should allow access to welcome page with correct credentials ","time":{"start":1675584850926,"stop":1675584857882,"duration":6956},"status":"passed","severity":"normal"}]
+[]
