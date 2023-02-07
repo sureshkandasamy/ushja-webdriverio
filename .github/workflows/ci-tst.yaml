@@ -17,7 +17,7 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run test:local.tst.headless --suite '${{ github.event.inputs.test_suite_names }}'
+          run: npm run test:local.tst.headless '${{ github.event.inputs.test_suite_names }}'
         - uses: actions/upload-artifact@v1
           if: failure()
           with:
