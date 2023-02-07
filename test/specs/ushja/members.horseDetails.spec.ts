@@ -25,16 +25,15 @@ it('#UAT #Horses user should be able to view the My Active Horse details My Hors
 
   await HorseDetailsTablePage.myHorsesTable.waitForDisplayed()
   await expect(HorseDetailsTablePage.myHorsesTable).toExist()
-  const rows = await HorseDetailsTablePage.getTableRowCount()
 
-  expect(await HorseDetailsTablePage.getRowHorseName(2)).toEqual("TEMPERANCE 67")
+  expect(await HorseDetailsTablePage.getRowHorseName(3)).toEqual("TEMPERANCE 67")
 
-  expect(await HorseDetailsTablePage.getCellData(2, 1)).toEqual("-")
-  expect(await HorseDetailsTablePage.getCellData(2, 2)).toEqual("HJ6000241")
-  expect(await HorseDetailsTablePage.getCellData(2, 3)).toEqual("Annual Outreach")
-  expect(await HorseDetailsTablePage.getCellData(2, 4)).toEqual("10/18/2022")
-  expect(await HorseDetailsTablePage.getCellData(2, 5)).toEqual("10/31/2023")
-  expect(await HorseDetailsTablePage.getCellData(2, 6)).toEqual("Active")
+  expect(await HorseDetailsTablePage.getCellData(3, 1)).toEqual("-")
+  expect(await HorseDetailsTablePage.getCellData(3, 2)).toEqual("HJ6000241")
+  expect(await HorseDetailsTablePage.getCellData(3, 3)).toEqual("Annual Outreach")
+  expect(await HorseDetailsTablePage.getCellData(3, 4)).toEqual("10/18/2022")
+  expect(await HorseDetailsTablePage.getCellData(3, 5)).toEqual("10/31/2023")
+  expect(await HorseDetailsTablePage.getCellData(3, 6)).toEqual("Active")
 
 })
     

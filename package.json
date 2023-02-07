@@ -24,8 +24,8 @@
   "scripts": {
     "test": "wdio run wdio.local.tst.conf.ts",
     "test:local.tst": "wdio run wdio.local.tst.conf.ts",
-    "test:local.tst.headless": "wdio run wdio.local.tst.headless.conf.ts",
-    "test:local.uat": "wdio run wdio.local.uat.conf.ts",
+    "test:local.tst.headless": "wdio run wdio.local.tst.headless.conf.ts --suite %npm_config_suiteName%",
+    "test:local.uat": "wdio run wdio.local.uat.conf.ts --suite %npm_config_suiteName%",
     "allure:open": "npx allure open ./allure-report",
     "allure:serve": "npx allure serve"
   },

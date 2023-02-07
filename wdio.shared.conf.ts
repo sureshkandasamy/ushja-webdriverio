@@ -33,18 +33,18 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     ],
     suites: {
         login: [
-            './test/specs/ushja/members.login.spec.js'
+            './test/specs/ushja/members.login.spec.ts'
         ],
         membership: [
-            './test/specs/ushja/members.joinUshja.spec.js',
-            './test/specs/ushja/members.profileInfo.spec.js'
+            './test/specs/ushja/members.joinUshja.spec.ts',
+            './test/specs/ushja/members.profileInfo.spec.ts'
         ],
         horses: [
-            './test/specs/ushja/members.horseDetails.spec.js'        ],
+            './test/specs/ushja/members.horseDetails.spec.ts'        ],
         e2e: [],
         smoke: [ 
-            './test/specs/ushja/members.login.spec.js',
-            './test/specs/ushja/members.profileInfo.spec.js'
+            './test/specs/ushja/members.login.spec.ts',
+            './test/specs/ushja/members.profileInfo.spec.ts'
         ],
         regression: [ 
             './test/specs/ushja/**/*.ts'
