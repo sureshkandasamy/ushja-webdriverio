@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type=text]\"}\n  (Session info: headless chrome=109.0.5414.119)",
+  "stacktrace": "#0 0x562be6c05303 <unknown>\n#1 0x562be69d9d37 <unknown>\n#2 0x562be6a165b2 <unknown>\n#3 0x562be6a166c1 <unknown>\n#4 0x562be6a50b34 <unknown>\n#5 0x562be6a369ad <unknown>\n#6 0x562be6a4e88c <unknown>\n#7 0x562be6a36753 <unknown>\n#8 0x562be6a09a14 <unknown>\n#9 0x562be6a0ab7e <unknown>\n#10 0x562be6c5432e <unknown>\n#11 0x562be6c57c0e <unknown>\n#12 0x562be6c3a610 <unknown>\n#13 0x562be6c58c23 <unknown>\n#14 0x562be6c2c545 <unknown>\n#15 0x562be6c796a8 <unknown>\n#16 0x562be6c79836 <unknown>\n#17 0x562be6c94d13 <unknown>\n#18 0x7f9f00f55b43 <unknown>\n"
+}
