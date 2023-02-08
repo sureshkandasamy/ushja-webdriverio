@@ -56,7 +56,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
         // 'path/to/excluded/files'
     ],
 
-    services: ['selenium-standalone' ],
+    services: ['selenium-standalone' , 'safaridriver'],
 
     //
     // ============
