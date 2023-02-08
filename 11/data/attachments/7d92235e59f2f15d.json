@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h4[contains(text(), \"Welcome\")]\"}\n  (Session info: headless chrome=109.0.5414.119)",
-  "stacktrace": "#0 0x55933d627303 <unknown>\n#1 0x55933d3fbd37 <unknown>\n#2 0x55933d4385b2 <unknown>\n#3 0x55933d4386c1 <unknown>\n#4 0x55933d472b34 <unknown>\n#5 0x55933d4589ad <unknown>\n#6 0x55933d47088c <unknown>\n#7 0x55933d458753 <unknown>\n#8 0x55933d42ba14 <unknown>\n#9 0x55933d42cb7e <unknown>\n#10 0x55933d67632e <unknown>\n#11 0x55933d679c0e <unknown>\n#12 0x55933d65c610 <unknown>\n#13 0x55933d67ac23 <unknown>\n#14 0x55933d64e545 <unknown>\n#15 0x55933d69b6a8 <unknown>\n#16 0x55933d69b836 <unknown>\n#17 0x55933d6b6d13 <unknown>\n#18 0x7fb15956db43 <unknown>\n"
-}
