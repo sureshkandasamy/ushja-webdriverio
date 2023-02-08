@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//tbody/tr[3]/th/div"
-}
