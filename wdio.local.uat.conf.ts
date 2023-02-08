@@ -5,14 +5,12 @@ export const config: WebdriverIO.Config = {
     ...{
         capabilities: [{
             'browserName': 'chrome',
-            port: 4444,
             'goog:chromeOptions': {
                args: ['--headless']
             }
         },
         {
-            browserName: 'safari',
-            port: 4445
+            browserName: 'safari'
         }
         ],
 
