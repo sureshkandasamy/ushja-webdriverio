@@ -4,17 +4,16 @@ export const config: WebdriverIO.Config = {
     ...sharedConfig,
     ...{
         capabilities: [{
-            browserName: 'chrome',
-            "goog:chromeOptions": {
-            	args: ['-headless']
-          	},
-
-
-          },
-                       {
-            browserName: 'safari'         
-
-          }
+            'browserName': 'chrome',
+            port: 4444,
+            'goog:chromeOptions': {
+               args: ['--headless']
+            }
+        },
+        {
+            browserName: 'safari',
+            port: 4445
+        }
         ],
 
     // Options to be passed to Jasmine.
