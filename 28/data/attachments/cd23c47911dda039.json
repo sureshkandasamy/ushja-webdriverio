@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div/p[contains(text(), \"Join USHJA\")]\"}\n  (Session info: headless chrome=109.0.5414.119)",
+  "stacktrace": "#0 0x555a070ed303 <unknown>\n#1 0x555a06ec1d37 <unknown>\n#2 0x555a06efe5b2 <unknown>\n#3 0x555a06efe6c1 <unknown>\n#4 0x555a06f38b34 <unknown>\n#5 0x555a06f1e9ad <unknown>\n#6 0x555a06f3688c <unknown>\n#7 0x555a06f1e753 <unknown>\n#8 0x555a06ef1a14 <unknown>\n#9 0x555a06ef2b7e <unknown>\n#10 0x555a0713c32e <unknown>\n#11 0x555a0713fc0e <unknown>\n#12 0x555a07122610 <unknown>\n#13 0x555a07140c23 <unknown>\n#14 0x555a07114545 <unknown>\n#15 0x555a071616a8 <unknown>\n#16 0x555a07161836 <unknown>\n#17 0x555a0717cd13 <unknown>\n#18 0x7f970895db43 <unknown>\n"
+}
