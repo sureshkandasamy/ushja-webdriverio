@@ -8,9 +8,6 @@ export const config: WebdriverIO.Config = {
             'goog:chromeOptions': {
                args: ['--headless']
             }
-        },
-        {
-            browserName: 'safari'
         }
         ],
 
