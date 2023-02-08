@@ -10,6 +10,10 @@ export const config: WebdriverIO.Config = {
           	},
 
 
+          },
+                       {
+            browserName: 'safari'         
+
           }
         ],
 
