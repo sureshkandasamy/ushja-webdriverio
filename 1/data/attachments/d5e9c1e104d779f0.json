@@ -1,4 +1,0 @@
-{
-  "script": "browserstack_executor: {\"action\":\"annotate\",\"arguments\":{\"data\":\"Test: profile Information #UAT #Membership Member profile info should be correct\",\"level\":\"info\"}}",
-  "args": []
-}
