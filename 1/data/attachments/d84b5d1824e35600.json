@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div/p[contains(text(), \"Join USHJA\")]\"}\n  (Session info: chrome=109.0.5414.75)",
+  "stacktrace": "Backtrace:\n\t(No symbol) [0x00BF6643]\n\t(No symbol) [0x00B8BE21]\n\t(No symbol) [0x00A8DA9D]\n\t(No symbol) [0x00AC1342]\n\t(No symbol) [0x00AC147B]\n\t(No symbol) [0x00AF8DC2]\n\t(No symbol) [0x00ADFDC4]\n\t(No symbol) [0x00AF6B09]\n\t(No symbol) [0x00ADFB76]\n\t(No symbol) [0x00AB49C1]\n\t(No symbol) [0x00AB5E5D]\n\tGetHandleVerifier [0x00E6A142+2497106]\n\tGetHandleVerifier [0x00E985D3+2686691]\n\tGetHandleVerifier [0x00E9BB9C+2700460]\n\tGetHandleVerifier [0x00CA3B10+635936]\n\t(No symbol) [0x00B94A1F]\n\t(No symbol) [0x00B9A418]\n\t(No symbol) [0x00B9A505]\n\t(No symbol) [0x00BA508B]\n\tBaseThreadInitThunk [0x75B37BA9+25]\n\tRtlInitializeExceptionChain [0x773FBB3B+107]\n\tRtlClearBits [0x773FBABF+191]\n"
+}

@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "Unable to locate element: input[type=text]",
-  "stacktrace": "RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:180:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:392:5\nelement.find/</<@chrome://remote/content/marionette/element.sys.mjs:275:16\n"
-}

@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//p[text()=\"Manage my details\"]/parent::div//table\"}\n  (Session info: chrome=109.0.5414.75)",
+  "stacktrace": "Backtrace:\n\t(No symbol) [0x00AB6643]\n\t(No symbol) [0x00A4BE21]\n\t(No symbol) [0x0094DA9D]\n\t(No symbol) [0x00981342]\n\t(No symbol) [0x0098147B]\n\t(No symbol) [0x009B8DC2]\n\t(No symbol) [0x0099FDC4]\n\t(No symbol) [0x009B6B09]\n\t(No symbol) [0x0099FB76]\n\t(No symbol) [0x009749C1]\n\t(No symbol) [0x00975E5D]\n\tGetHandleVerifier [0x00D2A142+2497106]\n\tGetHandleVerifier [0x00D585D3+2686691]\n\tGetHandleVerifier [0x00D5BB9C+2700460]\n\tGetHandleVerifier [0x00B63B10+635936]\n\t(No symbol) [0x00A54A1F]\n\t(No symbol) [0x00A5A418]\n\t(No symbol) [0x00A5A505]\n\t(No symbol) [0x00A6508B]\n\tBaseThreadInitThunk [0x767F7BA9+25]\n\tRtlInitializeExceptionChain [0x776DBB3B+107]\n\tRtlClearBits [0x776DBABF+191]\n"
+}
