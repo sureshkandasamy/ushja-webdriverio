@@ -23,6 +23,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
+    services: ['selenium-standalone'],
     //
     // ==================
     // Specify Test Files

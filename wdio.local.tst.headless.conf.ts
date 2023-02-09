@@ -7,19 +7,19 @@ export const config: WebdriverIO.Config = {
         capabilities: [{
             browserName: 'chrome',
             "goog:chromeOptions": {
-            	args: ['-headless']
-          	},
+                args: ['-headless']
+            },
 
 
         },
-            {
-                browserName: "firefox",
-                "moz:firefoxOptions": {
-                    args: ['-headless']
-                  },
-    
-        }        
-        
-]
+        {
+            browserName: "firefox",
+            "moz:firefoxOptions": {
+                args: ['-headless']
+            },
+
+        }
+
+        ]
     }
 }
