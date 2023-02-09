@@ -1,8 +1,8 @@
-name: CI-UAT
+name: CI-TST-BROWSERSTACK
 #on: [push, pull_request]
 on: 
- workflow_dispatch:
-  inputs:
+  workflow_dispatch:
+   inputs:
      test_suite_names:
       description: 'Test Suites'
 jobs:
@@ -17,9 +17,8 @@ jobs:
             node-version: 18
         - name: Install
           run: npm install
-          
         - name: Test
-          run: npm run test:local.uat.headless
+          run: npm run test:browserstack.tst
         - uses: actions/upload-artifact@v1
           continue-on-error: true
           if: failure()
@@ -59,4 +58,4 @@ jobs:
             PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             PUBLISH_BRANCH: gh-pages
             PUBLISH_DIR: allure-history  
-        
+

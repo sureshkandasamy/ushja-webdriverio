@@ -10,7 +10,11 @@ import allureReporter from '@wdio/allure-reporter'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
-export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
+export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
+
+    user: process.env.BROWSERSTACK_USERNAME || "krithikanallaswa_KUOd8P",
+    key: process.env.BROWSERSTACK_ACCESS_KEY || "Pts9XtVioJNCL32mLKFJ",
+    host: 'hub.browserstack.com',
     //
     // ====================
     // Runner Configuration
@@ -56,7 +60,11 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
         // 'path/to/excluded/files'
     ],
 
-    services: ['selenium-standalone' ],
+   // services: ['selenium-standalone' ],
+    services: [
+        ['browserstack']
+    ]
+        ,
 
     //
     // ============

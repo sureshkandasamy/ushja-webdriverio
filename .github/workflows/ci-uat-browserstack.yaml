@@ -1,4 +1,4 @@
-name: CI-UAT
+name: CI-UAT-BROWSERSTACK
 #on: [push, pull_request]
 on: 
  workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
           run: npm install
           
         - name: Test
-          run: npm run test:local.uat.headless
+          run: npm run test:browserstack.uat
         - uses: actions/upload-artifact@v1
           continue-on-error: true
           if: failure()

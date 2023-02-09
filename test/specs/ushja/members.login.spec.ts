@@ -16,7 +16,7 @@ describe('login', ()=> {
    await expect(LoginPage.loginError).toHaveTextContaining('The username/ID you provided does not exist. If you have an account, please search for your information and create a new password.')
 
 })
-    it('#UAT #Login should allow access to welcome page with correct credentials ', async () => {
+    it('#browserstackTest #UAT #Login should allow access to welcome page with correct credentials ', async () => {
       allureReporter.addFeature("Login");
 
         await LoginPage.open()

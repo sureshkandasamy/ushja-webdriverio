@@ -9,7 +9,7 @@ class LoginPage extends Page {
       get password () { return $('input[type=password]') }
       get submitButton () { return $('button.login-btn') }
       get loginError () { return $('p.Mui-error') }
-      get welcomeText () { return $('//h4[contains(text(), "Welcome")]') }
+      get welcomeText () { return $('//p[contains(text(), "Welcome")]') }
 
       
 

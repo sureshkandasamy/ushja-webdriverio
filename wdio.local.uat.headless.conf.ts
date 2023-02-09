@@ -17,7 +17,7 @@ export const config: WebdriverIO.Config = {
     jasmineOpts: {
         // Jasmine default timeout
         defaultTimeoutInterval: 120000,
-        grep: '#UAT',
+        grep: '#UAT'
     },
     }
 }
