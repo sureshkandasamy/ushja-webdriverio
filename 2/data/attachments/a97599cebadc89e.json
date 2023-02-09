@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()=\"Manage my details\"]/parent::div//table\"}\n  (Session info: chrome=108.0.5359.128)",
+  "stacktrace": "#0 0x555c15cdf2a3 <unknown>\n#1 0x555c15a9df77 <unknown>\n#2 0x555c15ada80c <unknown>\n#3 0x555c15adaa71 <unknown>\n#4 0x555c15b14734 <unknown>\n#5 0x555c15afab5d <unknown>\n#6 0x555c15b1247c <unknown>\n#7 0x555c15afa903 <unknown>\n#8 0x555c15acdece <unknown>\n#9 0x555c15acefde <unknown>\n#10 0x555c15d2f63e <unknown>\n#11 0x555c15d32b79 <unknown>\n#12 0x555c15d1589e <unknown>\n#13 0x555c15d33a83 <unknown>\n#14 0x555c15d08505 <unknown>\n#15 0x555c15d54ca8 <unknown>\n#16 0x555c15d54e36 <unknown>\n#17 0x555c15d70333 <unknown>\n#18 0x7f4e414fee9e start_thread\n"
+}

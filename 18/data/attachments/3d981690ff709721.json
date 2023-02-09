@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"p.makeStyles-name-21\"}\n  (Session info: headless chrome=109.0.5414.119)",
-  "stacktrace": "#0 0x55c1adf5a303 <unknown>\n#1 0x55c1add2ed37 <unknown>\n#2 0x55c1add6b5b2 <unknown>\n#3 0x55c1add6b6c1 <unknown>\n#4 0x55c1adda5b34 <unknown>\n#5 0x55c1add8b9ad <unknown>\n#6 0x55c1adda388c <unknown>\n#7 0x55c1add8b753 <unknown>\n#8 0x55c1add5ea14 <unknown>\n#9 0x55c1add5fb7e <unknown>\n#10 0x55c1adfa932e <unknown>\n#11 0x55c1adfacc0e <unknown>\n#12 0x55c1adf8f610 <unknown>\n#13 0x55c1adfadc23 <unknown>\n#14 0x55c1adf81545 <unknown>\n#15 0x55c1adfce6a8 <unknown>\n#16 0x55c1adfce836 <unknown>\n#17 0x55c1adfe9d13 <unknown>\n#18 0x7f6cc00dbb43 <unknown>\n"
-}
