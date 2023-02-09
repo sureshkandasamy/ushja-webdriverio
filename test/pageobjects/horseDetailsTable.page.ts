@@ -4,7 +4,7 @@ class HorseDetailsTablePage extends Page {
       /**
      * define elements
      */    
-      get myHorsesTable () { return $('//div/h5[text()="Manage my details"]/parent::div//table') }
+      get myHorsesTable () { return $('//p[text()="Manage my details"]/parent::div//table') }
       get myHorsesTableBody () { return this.myHorsesTable.$('/tbody') }
 
       async getTableRowCount () {

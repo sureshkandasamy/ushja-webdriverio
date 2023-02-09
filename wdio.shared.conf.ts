@@ -10,7 +10,7 @@ import allureReporter from '@wdio/allure-reporter'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
-export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
+export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
 
     user: process.env.BROWSERSTACK_USERNAME || "krithikanallaswa_KUOd8P",
     key: process.env.BROWSERSTACK_ACCESS_KEY || "Pts9XtVioJNCL32mLKFJ",
@@ -44,13 +44,13 @@ export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
             './test/specs/ushja/members.profileInfo.spec.ts'
         ],
         horses: [
-            './test/specs/ushja/members.horseDetails.spec.ts'        ],
+            './test/specs/ushja/members.horseDetails.spec.ts'],
         e2e: [],
-        smoke: [ 
+        smoke: [
             './test/specs/ushja/members.login.spec.ts',
             './test/specs/ushja/members.profileInfo.spec.ts'
         ],
-        regression: [ 
+        regression: [
             './test/specs/ushja/**/*.ts'
         ]
     },
@@ -60,11 +60,6 @@ export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
         // 'path/to/excluded/files'
     ],
 
-   // services: ['selenium-standalone' ],
-    services: [
-        ['browserstack']
-    ]
-        ,
 
     //
     // ============
@@ -120,16 +115,16 @@ export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'jasmine',
-   
+
     //
     // Options to be passed to Jasmine.
     jasmineOpts: {
         // Jasmine default timeout
         defaultTimeoutInterval: 120000,
     },
-    
+
     reporters: ['spec',
-         ['allure', {
+        ['allure', {
             outputDir: 'allure-results',
             // disableWebdriverStepsReporting: true,
             // disableWebdriverScreenshotsReporting: false,
@@ -145,7 +140,7 @@ export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
     // it and to build services around it. You can either apply a single function or an array of
     // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
     // resolved to continue.  
-    
+
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
@@ -153,61 +148,61 @@ export const config:Omit<WebdriverIO.Config, 'capabilities'>  = {
         let currentTestName = test.fullName;
         var moduleName;
 
-        if (currentTestName.includes("#Login")==true) {
+        if (currentTestName.includes("#Login") == true) {
             moduleName = "Login";
-        }else if (currentTestName.includes("#Membership")==true) {
+        } else if (currentTestName.includes("#Membership") == true) {
             moduleName = "Membership";
-        }else if (currentTestName.includes("#Horses")==true) {
+        } else if (currentTestName.includes("#Horses") == true) {
             moduleName = "Horses";
         }
 
-        switch(moduleName){
+        switch (moduleName) {
             case "Login":
-                allureReporter.addFeature("Login"); 
-                break; 
+                allureReporter.addFeature("Login");
+                break;
             case "Membership":
-              allureReporter.addFeature("Membership");
-              break;
+                allureReporter.addFeature("Membership");
+                break;
             case "Horses":
-              allureReporter.addFeature("Horses");
-              break;
+                allureReporter.addFeature("Horses");
+                break;
         }
-       
-        if (moduleName!="Login") {
+
+        if (moduleName != "Login") {
             await LoginPage.open()
             await LoginPage.username.setValue(testData.tstdata.username)
             await LoginPage.password.setValue(testData.tstdata.password)
             await LoginPage.submit()
-    
-            await LoginPage.welcomeText.waitForDisplayed() 
 
-        }   
+            await LoginPage.welcomeText.waitForDisplayed()
+
+        }
 
     },
-    
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+
+    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         await browser.takeScreenshot();
     },
 
-    onComplete: function() {
+    onComplete: function () {
         const reportError = new Error('Could not generate Allure report')
         const generation = allure(['generate', 'allure-results', '--clean'])
         return new Promise((resolve, reject) => {
             const generationTimeout = setTimeout(
                 () => reject(reportError),
                 5000)
-    
-            generation.on('exit', function(exitCode) {
+
+            generation.on('exit', function (exitCode) {
                 clearTimeout(generationTimeout)
-    
+
                 if (exitCode !== 0) {
                     return reject(reportError)
                 }
-    
+
                 console.log('Allure report successfully generated')
                 resolve()
             })
         })
     }
-    
+
 }

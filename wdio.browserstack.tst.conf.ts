@@ -3,6 +3,9 @@ import { config as sharedConfig } from './wdio.shared.conf.js'
 export const config: WebdriverIO.Config = {
   ...sharedConfig,
   ...{
+    services: [
+      ['browserstack']
+    ],
     capabilities: [
       {
         browserName: 'Chrome',

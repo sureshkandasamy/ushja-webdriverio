@@ -1,5 +1,5 @@
 {
-    "tst": {
+    "pranesh": {
     "username": "praneshTest25",
     "password": "pranesh",
     "profileInfo": {
@@ -9,6 +9,19 @@
         "profileInfoCategory": "Coach",
         "profileInfoPrimaryDiscipline": "Hunter",
         "profileInfoOtherDiscipline": ""
+        }
+
+},
+"tst": {
+    "username": "SummerStoffel21",
+    "password": "Bellsoph@01",
+    "profileInfo": {
+        "profileInfoName":"SUMMER STOFFEL",
+        "profileInfoId":"HJ263638",
+        "profileInfoStatus": "Active/Competing",
+        "profileInfoCategory": "Breeder, Owner, Rider",
+        "profileInfoPrimaryDiscipline": "Jumper",
+        "profileInfoOtherDiscipline": "Hunter, Friesian"
         }
 
 }
