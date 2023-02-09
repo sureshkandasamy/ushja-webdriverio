@@ -26,7 +26,7 @@ it('#UAT #Horses user should be able to view the My Active Horse details My Hors
   await HorseDetailsTablePage.myHorsesTable.waitForDisplayed()
   await expect(HorseDetailsTablePage.myHorsesTable).toExist()
 
-    expect(await HorseDetailsTablePage.getRowHorseName(3)).toEqual("SILVER CREEK'S VICTORIOUS")
+    expect(await HorseDetailsTablePage.getRowHorseName(1)).toEqual("SILVER CREEK'S VICTORIOUS")
 
   expect(await HorseDetailsTablePage.getCellData(1, 1)).toEqual("5396040")
   expect(await HorseDetailsTablePage.getCellData(1, 2)).toEqual("HJ5396040")
