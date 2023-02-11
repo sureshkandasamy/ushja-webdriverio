@@ -10,19 +10,31 @@
         "profileInfoPrimaryDiscipline": "Hunter",
         "profileInfoOtherDiscipline": ""
         }
+    },
+    "tst1": {
+        "username": "SummerStoffel21", 
+        "password": "Bellsoph@01",     
+        "profileInfo": {
+            "profileInfoName":"SUMMER STOFFEL",
+            "profileInfoId":"HJ263638",
+            "profileInfoStatus": "Active/Competing",
+            "profileInfoCategory": "Breeder, Owner, Rider",
+            "profileInfoPrimaryDiscipline": "Jumper",
+            "profileInfoOtherDiscipline": "Hunter, Friesian"
+            }
 
-},
-"tst": {
-    "username": "SummerStoffel21",
-    "password": "Bellsoph@01",
-    "profileInfo": {
-        "profileInfoName":"SUMMER STOFFEL",
-        "profileInfoId":"HJ263638",
-        "profileInfoStatus": "Active/Competing",
-        "profileInfoCategory": "Breeder, Owner, Rider",
-        "profileInfoPrimaryDiscipline": "Jumper",
-        "profileInfoOtherDiscipline": "Hunter, Friesian"
-        }
+    },
+    "tst": {
+        "username": "USHJAtestorg", 
+        "password": "Admin@123",     
+        "profileInfo": {
+            "profileInfoName":"USHJA TEST ORG",
+            "profileInfoId":"HJ6000223",
+            "profileInfoStatus": "Active/Competing",
+            "profileInfoCategory": "Breeder, Owner, Rider",
+            "profileInfoPrimaryDiscipline": "Jumper",
+            "profileInfoOtherDiscipline": "Hunter, Friesian"
+            }
 
-}
+    }
 }

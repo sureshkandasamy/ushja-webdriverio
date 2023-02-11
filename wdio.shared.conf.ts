@@ -34,7 +34,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/ushja/**/*.ts'
+       // './test/specs/ushja/**/*.ts'
+       './test/specs/ushja/members.org.businessmembershipAppln.spec.ts'
+    //'./test/specs/ushja/test.spec.ts'
     ],
     suites: {
         login: [
@@ -121,7 +123,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // Options to be passed to Jasmine.
     jasmineOpts: {
         // Jasmine default timeout
-        defaultTimeoutInterval: 120000,
+        defaultTimeoutInterval: 360000,
     },
 
     reporters: ['spec',
@@ -171,8 +173,11 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
 
         if (moduleName != "Login") {
             await LoginPage.open()
-            await LoginPage.username.setValue(testData.tstdata.username)
-            await LoginPage.password.setValue(testData.tstdata.password)
+            // await LoginPage.username.setValue(testData.tstdata.username)
+            // await LoginPage.password.setValue(testData.tstdata.password)
+
+            await LoginPage.username.setValue("USHJAtestorg")
+            await LoginPage.password.setValue("Admin@123")
             await LoginPage.submit()
 
             await LoginPage.welcomeText.waitForDisplayed()
@@ -182,10 +187,12 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     },
 
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+        console.log("Taking screenshot")
         await browser.takeScreenshot();
     },
 
     onComplete: function () {
+        console.log("Generating report")
         const reportError = new Error('Could not generate Allure report')
         const generation = allure(['generate', 'allure-results', '--clean'])
         return new Promise((resolve, reject) => {

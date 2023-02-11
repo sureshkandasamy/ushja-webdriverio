@@ -1,9 +1,7 @@
 import Page from './page.js'
 
 class ProfileInfoPage extends Page {
-      /**
-     * define elements
-     */    
+      /*** define elements */    
       get profileInfoName () { return $('p.makeStyles-name-21') }
       get profileInfoId () { return $('p.makeStyles-membershipId-23') }
 
@@ -13,8 +11,6 @@ class ProfileInfoPage extends Page {
       get profileInfoPrimaryDiscipline () { return $('//div/p[text()="Primary Discipline"]/parent::div/div/p') }
 
       get profileInfoOtherDiscipline () { return $('//div/p[text()="Other Disciplines"]/parent::div/div/p') }
-
-
 }
 
 export default new ProfileInfoPage()

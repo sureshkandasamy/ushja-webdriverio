@@ -1,9 +1,7 @@
 import Page from './page.js'
 
 class JoinUshjaDialogPage extends Page {
-      /**
-     * define elements
-     */    
+      /*** define elements */    
       get joinUSHJADialog () { return $('div[role="dialog"]') }
 
       get joinUSHJAActionCard () { return $('//div/p[contains(text(), "Join USHJA")]') }

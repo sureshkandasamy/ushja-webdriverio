@@ -1,11 +1,8 @@
 import JoinUshjaDialogPage from '../../pageobjects/joinUshjaDialog.page.js'
 import LoginPage from '../../pageobjects/login.page.js'
 
-
-
 describe('joinUshja', ()=> {
-
-
+  
   it('#UAT #Membership user should be able to click Join USHJA and displayed with Join USHJA dialog', async () => {
 
     await JoinUshjaDialogPage.joinUSHJAActionCard.waitForDisplayed()

@@ -64,3 +64,5 @@ typings/
 # WebdriverIO files
 errorShots
 .vscode
+wdio.local.tst.conf.ts
+test/specs/ushja/test.spec.ts
