@@ -22,8 +22,8 @@ describe('login', ()=> {
     allureReporter.addFeature("Login");
 
       await LoginPage.open()
-      await LoginPage.username.setValue(testData.tstdata.username)
-      await LoginPage.password.setValue(testData.tstdata.password)
+      await LoginPage.username.setValue(testData.normallogin.username)
+      await LoginPage.password.setValue(testData.normallogin.password)
       await LoginPage.submit()
 
       await LoginPage.welcomeText.waitForDisplayed()

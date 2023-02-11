@@ -34,9 +34,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-       // './test/specs/ushja/**/*.ts'
-       './test/specs/ushja/members.org.businessmembershipAppln.spec.ts'
-    //'./test/specs/ushja/test.spec.ts'
+        './test/specs/ushja/**/*.ts'
+       //'./test/specs/ushja/members.org.businessmembershipAppln.spec.ts'
+        //'./test/specs/ushja/test.spec.ts'
     ],
     suites: {
         login: [
@@ -157,6 +157,8 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
             moduleName = "Membership";
         } else if (currentTestName.includes("#Horses") == true) {
             moduleName = "Horses";
+        } else if (currentTestName.includes("#Business") == true) {
+            moduleName = "Business";
         }
 
         switch (moduleName) {
@@ -173,15 +175,18 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
 
         if (moduleName != "Login") {
             await LoginPage.open()
-            // await LoginPage.username.setValue(testData.tstdata.username)
-            // await LoginPage.password.setValue(testData.tstdata.password)
-
-            await LoginPage.username.setValue("USHJAtestorg")
-            await LoginPage.password.setValue("Admin@123")
+            let username = testData.normallogin.username;
+            let password = testData.normallogin.password;
+            console.log("moduleName: " + moduleName);
+            if(moduleName == "Business") {
+                username = testData.busuinesslogin.username;
+                password = testData.busuinesslogin.password;
+            }
+            await LoginPage.username.setValue(username)
+            await LoginPage.password.setValue(password)
             await LoginPage.submit()
 
             await LoginPage.welcomeText.waitForDisplayed()
-
         }
 
     },

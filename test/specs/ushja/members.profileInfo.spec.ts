@@ -6,13 +6,13 @@ describe('profile Information', ()=> {
 
   it('#UAT #Membership Member profile info should be correct', async () => {    
     await ProfileInfoPage.profileInfoName.waitForDisplayed()
-    await expect(ProfileInfoPage.profileInfoName).toHaveText(testData.tstdata.profileInfo.profileInfoName)
-    await expect(ProfileInfoPage.profileInfoId).toHaveTextContaining(testData.tstdata.profileInfo.profileInfoId)
+    await expect(ProfileInfoPage.profileInfoName).toHaveText(testData.normallogin.profileInfo.profileInfoName)
+    await expect(ProfileInfoPage.profileInfoId).toHaveTextContaining(testData.normallogin.profileInfo.profileInfoId)
 
-    await expect(ProfileInfoPage.profileInfoStatus).toHaveText(testData.tstdata.profileInfo.profileInfoStatus)
-    await expect(ProfileInfoPage.profileInfoCategory).toHaveText(testData.tstdata.profileInfo.profileInfoCategory)
-    await expect(ProfileInfoPage.profileInfoPrimaryDiscipline).toHaveText(testData.tstdata.profileInfo.profileInfoPrimaryDiscipline)
-    await expect(ProfileInfoPage.profileInfoOtherDiscipline).toHaveText(testData.tstdata.profileInfo.profileInfoOtherDiscipline)
+    await expect(ProfileInfoPage.profileInfoStatus).toHaveText(testData.normallogin.profileInfo.profileInfoStatus)
+    await expect(ProfileInfoPage.profileInfoCategory).toHaveText(testData.normallogin.profileInfo.profileInfoCategory)
+    await expect(ProfileInfoPage.profileInfoPrimaryDiscipline).toHaveText(testData.normallogin.profileInfo.profileInfoPrimaryDiscipline)
+    await expect(ProfileInfoPage.profileInfoOtherDiscipline).toHaveText(testData.normallogin.profileInfo.profileInfoOtherDiscipline)
   })   
 
 })

@@ -12,14 +12,14 @@ fs.readFile("./test/testdata/testData.json", "utf8", (err, jsonString) => {
 });
 
 class testData {
-    get data() {
+    get busuinesslogin() {
       //console.log(jsondata);
-      return jsondata
+      return jsondata.businesslogin
     };
 
-    get tstdata() { 
+    get normallogin() { 
       //console.log(jsondata);
-      return jsondata.tst
+      return jsondata.normallogin
     };
 
     /*

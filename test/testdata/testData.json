@@ -11,7 +11,7 @@
         "profileInfoOtherDiscipline": ""
         }
     },
-    "tst1": {
+    "normallogin": {
         "username": "SummerStoffel21", 
         "password": "Bellsoph@01",     
         "profileInfo": {
@@ -24,7 +24,7 @@
             }
 
     },
-    "tst": {
+    "businesslogin": {
         "username": "USHJAtestorg", 
         "password": "Admin@123",     
         "profileInfo": {
