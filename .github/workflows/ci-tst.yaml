@@ -12,7 +12,7 @@ jobs:
     steps:
         - uses: browser-actions/setup-chrome@v1
           with:
-            chrome-version: latest
+            chrome-version: stable
           id: setup-chrome
         - run: |
             echo Installed chrome version: ${{ steps.setup-chrome.outputs.chrome-version }}
