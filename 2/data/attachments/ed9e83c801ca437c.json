@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()=\"Manage my details\"]/parent::div//table\"}\n  (Session info: chrome=109.0.5414.75)",
-  "stacktrace": "Backtrace:\n\t(No symbol) [0x00356643]\n\t(No symbol) [0x002EBE21]\n\t(No symbol) [0x001EDA9D]\n\t(No symbol) [0x00221342]\n\t(No symbol) [0x0022147B]\n\t(No symbol) [0x00258DC2]\n\t(No symbol) [0x0023FDC4]\n\t(No symbol) [0x00256B09]\n\t(No symbol) [0x0023FB76]\n\t(No symbol) [0x002149C1]\n\t(No symbol) [0x00215E5D]\n\tGetHandleVerifier [0x005CA142+2497106]\n\tGetHandleVerifier [0x005F85D3+2686691]\n\tGetHandleVerifier [0x005FBB9C+2700460]\n\tGetHandleVerifier [0x00403B10+635936]\n\t(No symbol) [0x002F4A1F]\n\t(No symbol) [0x002FA418]\n\t(No symbol) [0x002FA505]\n\t(No symbol) [0x0030508B]\n\tBaseThreadInitThunk [0x76097BA9+25]\n\tRtlInitializeExceptionChain [0x7720BB3B+107]\n\tRtlClearBits [0x7720BABF+191]\n"
-}
