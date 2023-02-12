@@ -171,6 +171,9 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
             case "Horses":
                 allureReporter.addFeature("Horses");
                 break;
+            case "Business":
+                allureReporter.addFeature("Business");
+                break;
         }
 
         if (moduleName != "Login") {

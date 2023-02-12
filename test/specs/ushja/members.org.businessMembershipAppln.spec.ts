@@ -4,7 +4,8 @@ import businessmembershipPage from '../../pageobjects/businessMembership.page.js
 describe('#Business Business Membership application', ()=> {
 
     it('Successfully submit a Business Membership application', async () => {
-        await businessmembershipPage.businessMembershipActionCard.click()
+
+        await businessmembershipPage.clickActionCard("Business Membership")
         await expect(businessmembershipPage.dialogHeading.$('//*[contains(text(), "Business Membership")]')).toExist()
         await businessmembershipPage.continueButton.click()
 
@@ -58,6 +59,10 @@ describe('#Business Business Membership application', ()=> {
         await businessmembershipPage.paymentCardNumTextBox.setValue("123456789")
         await businessmembershipPage.paymentCardMonthTextBox.setValue("02/25")
         await businessmembershipPage.paymentCardCvcTextBox.setValue("123")
-        await businessmembershipPage.paymentsaveCardCheckBox.click()        
+        await businessmembershipPage.paymentsaveCardCheckBox.click()  
+        
+        await businessmembershipPage.closeButton.scrollIntoView()
+        await businessmembershipPage.closeButton.click()  
+
     })
 })

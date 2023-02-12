@@ -1,15 +1,16 @@
 import Page from './page.js'
 
+
 class BusinessMembership extends Page {
       /*** define elements */    
       get loginText () { return $('p.login-text') }
       
       get businessMembershipActionCard () { return $('//div[@class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"]//child::p[contains(text(),"Business Membership")]') }
 
+    
       get dialog () { return $('div[role="dialog"]') }
       get dialogHeading () { return $('//div[contains(@class, "MuiDialogTitle-root")]') }
-      //get dialogHeading () { return $('//div[contains(@class, "MuiDialogTitle-root")]//*[contains(text(), "Business Membership")]') }
-    
+       
       get competitionYearRadioBtn () { return $('//span/input[@type="radio"]') }
     
       get businessNameTextBox () { return $('//input[@name="name"]') }
@@ -49,14 +50,18 @@ class BusinessMembership extends Page {
       get paymentCardCvcTextBox () { return $('//input[@id="cvc"]') }
       get paymentsaveCardCheckBox () { return $('//input[@name="saveMyCard"]') }
 
-      //get continueButton () { return $('//div[contains (@class, "MuiDialogActions-root")]//button/span[text()="Continue"]') }
       get continueButton () { return $('//button/span[text()="Continue"]') }
 
 
-      //*[@class ="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end" or @style="opacity: 1;"]//child::button/span[contains(text(),"Continue")]
-      get businessApplnContinueButton () { return $('//*[@class ="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end" or @style="opacity: 1;"]//child::button/span[contains(text(),"Continue")]') }
-      get closeButton () { return $('//div[contains(@class,"makeStyles-dialogTitle-262")]//button') }
 
+      //*[@class ="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end" or @style="opacity: 1;"]//child::button/span[contains(text(),"Continue")]
+      get businessApplnContinueButton () { return $$('//button/span[text()="Continue"]')[1]}
+      get closeButton () { return $$('//div/button[@aria-label ="close"]')[1] }
+
+      
+      async clickActionCard (cardName: string) {
+           await $('//p[contains(@class,"makeStyles-quickActionCardText") and text()="' + cardName + '"]').click()
+        }    
 
 }
 
