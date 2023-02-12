@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[text()=\"Manage my details\"]/parent::div//table"
+}

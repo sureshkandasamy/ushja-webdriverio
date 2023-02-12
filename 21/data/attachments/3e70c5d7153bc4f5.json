@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//p[contains(@class,\"makeStyles-quickActionCardText\") and text()=\"Business Membership\"]"
+}

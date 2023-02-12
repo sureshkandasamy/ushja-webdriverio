@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//div/p[text()=\"Primary Discipline\"]/parent::div/div/p"
+}
