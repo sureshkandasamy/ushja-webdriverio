@@ -10,6 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
+        - uses: browser-actions/setup-chrome@v1
+          with:
+            chrome-version: latest
+          id: setup-chrome
+        - run: |
+            echo Installed chrome version: ${{ steps.setup-chrome.outputs.chrome-version }}
+            chrome --version        
+
         - name: Checkout
           uses: actions/checkout@v2
         - uses: actions/setup-node@v1
