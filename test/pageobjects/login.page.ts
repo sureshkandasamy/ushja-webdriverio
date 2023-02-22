@@ -13,12 +13,22 @@ class LoginPage extends Page {
 
        /*** define or overwrite page methods */
     open () {
-        return super.open('login')
+        return super.open('/')
+
     }
 
     async submit () {
         await this.submitButton.click()
     }
+
+    async login(username:string,password:string) {
+        this.open()
+          await this.username.setValue(username);
+          await this.password.setValue(password);
+          await this.submitButton.click();
+          await this.welcomeText.waitForDisplayed(); 
+  
+      }
 }
 
 export default new LoginPage()

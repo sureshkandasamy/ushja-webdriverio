@@ -1,8 +1,12 @@
 import ProfileInfoPage from '../../pageobjects/profileInfo.page.js'
 import testData from '../../../utils/testData.js'
-
+import allureReporter from '@wdio/allure-reporter'
 
 describe('profile Information', ()=> {
+
+  beforeEach(() => {
+    allureReporter.addFeature("Membership");
+   });
 
   it('#UAT #Membership Member profile info should be correct', async () => {    
     await ProfileInfoPage.profileInfoName.waitForDisplayed()

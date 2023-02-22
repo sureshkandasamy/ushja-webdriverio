@@ -2,12 +2,13 @@ import LoginPage from '../../pageobjects/login.page.js'
 import allureReporter from '@wdio/allure-reporter'
 import testData from '../../../utils/testData.js'
 
-
 describe('login', ()=> {
 
-  it('#Login should deny access with wrong credentials ', async () => {
+  beforeEach(() => {
     allureReporter.addFeature("Login");
+   });
 
+  it('#Login should deny access with wrong credentials ', async () => {
     await LoginPage.open()
     await LoginPage.username.setValue('test')
     await LoginPage.password.setValue('test123invaLid')
@@ -19,8 +20,6 @@ describe('login', ()=> {
   })
   
   it('#browserstackTest #UAT #Login should allow access to welcome page with correct credentials ', async () => {
-    allureReporter.addFeature("Login");
-
       await LoginPage.open()
       await LoginPage.username.setValue(testData.normallogin.username)
       await LoginPage.password.setValue(testData.normallogin.password)

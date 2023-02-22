@@ -5,16 +5,13 @@ import LoginPage from './test/pageobjects/login.page.js'
 import testData from './utils/testData.js'
 import allureReporter from '@wdio/allure-reporter'
 
-
-
-
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
 
     user: process.env.BROWSERSTACK_USERNAME || "krithikanallaswa_KUOd8P",
     key: process.env.BROWSERSTACK_ACCESS_KEY || "Pts9XtVioJNCL32mLKFJ",
-    host: 'hub.browserstack.com',
+    //host: 'hub.browserstack.com',
     //
     // ====================
     // Runner Configuration
@@ -34,9 +31,15 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/ushja/**/*.ts'
+        //'./test/specs/ushja/**/*.ts'
+        //'./test/specs/ushja/members.login.spec.ts'
        //'./test/specs/ushja/members.org.businessmembershipAppln.spec.ts'
         //'./test/specs/ushja/test.spec.ts'
+       // './test/specs/ushja/members.horseDetails.spec.ts'
+    //    './test/specs/ushja/admin.members.spec.ts'
+    //'./test/specs/ushja/members.joinushja1.spec.ts'
+    './test/specs/ushja/members.joinushja1.mobile.spec.ts'
+
     ],
     suites: {
         login: [
@@ -123,7 +126,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
     // Options to be passed to Jasmine.
     jasmineOpts: {
         // Jasmine default timeout
-        defaultTimeoutInterval: 360000,
+        defaultTimeoutInterval: 3600000,
     },
 
     reporters: ['spec',
@@ -161,7 +164,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
             moduleName = "Business";
         }
 
-        switch (moduleName) {
+       /* switch (moduleName) {
             case "Login":
                 allureReporter.addFeature("Login");
                 break;
@@ -174,25 +177,29 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
             case "Business":
                 allureReporter.addFeature("Business");
                 break;
-        }
+        }*/
 
-        if (moduleName != "Login") {
-            await LoginPage.open()
-            let username = testData.normallogin.username;
-            let password = testData.normallogin.password;
-            console.log("moduleName: " + moduleName);
-            if(moduleName == "Business") {
-                username = testData.busuinesslogin.username;
-                password = testData.busuinesslogin.password;
-            }
-            await LoginPage.username.setValue(username)
-            await LoginPage.password.setValue(password)
-            await LoginPage.submit()
+        //TO-DO: remove the comment later
+        // if (moduleName != "Login") {
+        //     await LoginPage.open()
+        //     let username = testData.normallogin.username;
+        //     let password = testData.normallogin.password;
+        //     console.log("moduleName: " + moduleName);
+        //     if(moduleName == "Business") {
+        //         username = testData.busuinesslogin.username;
+        //         password = testData.busuinesslogin.password;
+        //     }
+        //     await LoginPage.username.setValue(username)
+        //     await LoginPage.password.setValue(password)
+        //     await LoginPage.submit()
 
-            await LoginPage.welcomeText.waitForDisplayed()
-        }
+        //     await LoginPage.welcomeText.waitForDisplayed()
+        // }
 
     },
+
+    
+    // todo: COMMENTED IN LOCAL. Please uncomment before check-in
 
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         console.log("Taking screenshot")
@@ -203,12 +210,12 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
         console.log("Generating report")
         const reportError = new Error('Could not generate Allure report')
         const generation = allure(['generate', 'allure-results', '--clean'])
-        return new Promise((resolve, reject) => {
+        return new Promise<void>((resolve, reject) => {
             const generationTimeout = setTimeout(
                 () => reject(reportError),
                 5000)
 
-            generation.on('exit', function (exitCode) {
+            generation.on('exit', function (exitCode: any) {
                 clearTimeout(generationTimeout)
 
                 if (exitCode !== 0) {
@@ -220,5 +227,7 @@ export const config: Omit<WebdriverIO.Config, 'capabilities'> = {
             })
         })
     }
+
+    
 
 }

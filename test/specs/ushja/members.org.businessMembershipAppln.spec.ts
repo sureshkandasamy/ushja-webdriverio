@@ -1,7 +1,12 @@
-
 import businessmembershipPage from '../../pageobjects/businessMembership.page.js'
+import allureReporter from '@wdio/allure-reporter'
 
 describe('#Business Business Membership application', ()=> {
+
+    beforeEach(() => {
+        allureReporter.addFeature("Business");
+    });
+    
 
     it('Successfully submit a Business Membership application', async () => {
 

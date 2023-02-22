@@ -24,6 +24,7 @@
   "scripts": {
     "test": "wdio run wdio.local.tst.conf.ts",
     "test:local.tst": "wdio run wdio.local.tst.conf.ts",
+    "test:local.tst-mobile": "wdio run wdio.local.tst-mobile.conf.ts",
     "test:local.tst.headless": "wdio run wdio.local.tst.headless.conf.ts",
     "test:local.uat.headless": "wdio run wdio.local.uat.headless.conf.ts",
     "test:browserstack.tst": "wdio run wdio.browserstack.tst.conf.ts",
@@ -32,8 +33,10 @@
     "allure:serve": "npx allure serve"
   },
   "devDependencies": {
+    "@types/jasmine": "^4.3.1",
     "@wdio/allure-reporter": "^8.3.0",
     "@wdio/cli": "^8.3.2",
+    "@wdio/devtools-service": "^8.3.10",
     "@wdio/globals": "^8.3.2",
     "@wdio/jasmine-framework": "^8.3.2",
     "@wdio/local-runner": "^8.3.2",
@@ -46,6 +49,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "install": "^0.13.0",
+    "jasmine-core": "^4.5.0",
     "npm": "^9.4.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",

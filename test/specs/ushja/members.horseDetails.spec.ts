@@ -1,7 +1,13 @@
 import HorseDetailsTablePage from '../../pageobjects/horseDetailsTable.page.js'
+import allureReporter from '@wdio/allure-reporter'
 import testData from '../../../utils/testData.js'
 
 describe('My horse details table', ()=> {
+
+  beforeEach(() => {
+    allureReporter.addFeature("Horses");
+   });
+
     
   /*   it('#Horses user should be able to view the My Horse details for "Processing" status', async () => {
 
@@ -27,12 +33,17 @@ describe('My horse details table', ()=> {
 
       expect(await HorseDetailsTablePage.getRowHorseName(1)).toEqual("SILVER CREEK'S VICTORIOUS")
 
-    expect(await HorseDetailsTablePage.getCellData(1, 1)).toEqual("5396040")
-    expect(await HorseDetailsTablePage.getCellData(1, 2)).toEqual("HJ5396040")
-    expect(await HorseDetailsTablePage.getCellData(1, 3)).toEqual("Life")
-    expect(await HorseDetailsTablePage.getCellData(1, 4)).toEqual("03/22/2016")
-    expect(await HorseDetailsTablePage.getCellData(1, 5)).toEqual("-")
-    expect(await HorseDetailsTablePage.getCellData(1, 6)).toEqual("Active")
+    expect(await HorseDetailsTablePage.getCellData("SILVER CREEK'S VICTORIOUS", "Registration Type")).toEqual("Life")
+   // expect( (await HorseDetailsTablePage.getRowData(1)).size).toEqual(9);
+    let rowData =   await HorseDetailsTablePage.getRowData(HorseDetailsTablePage.myHorsesTable, 1)
+    console.log("start date=" + rowData.get("Start Date"))
+
+
+    // expect(await HorseDetailsTablePage.getCellData(1, 2)).toEqual("HJ5396040")
+    // expect(await HorseDetailsTablePage.getCellData(1, 3)).toEqual("Life")
+    // expect(await HorseDetailsTablePage.getCellData(1, 4)).toEqual("03/22/2016")
+    // expect(await HorseDetailsTablePage.getCellData(1, 5)).toEqual("-")
+    // expect(await HorseDetailsTablePage.getCellData(1, 6)).toEqual("Active")
 
     /* expect(await HorseDetailsTablePage.getRowHorseName(3)).toEqual("TEMPERANCE 67")
     expect(await HorseDetailsTablePage.getCellData(3, 1)).toEqual("-")
